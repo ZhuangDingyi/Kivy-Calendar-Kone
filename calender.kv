@@ -1,24 +1,20 @@
+#:kivy 1.1.1
 <Button>:
-	background_color: 0.1,.5,.5,1
+	background_normal: ''
+	background_color: 154/256,226/256,248/256,1
+	canvas.before:
+        Color:
+            rgba: 0,0,0,1
+        Line:
+            width: 2
+            rectangle: self.x, self.y, self.width, self.height
 	
 <Calender>:
 	canvas.before:
 		Color:
-			rgba: .5,.6,.7,1
+			rgba: .53125,.66796875,.7890625,1
 		Rectangle:
 			pos: self.pos
 			size: self.size
 	orientation:'vertical'
-	BoxLayout:
-		size_hint:1,.1
-		Select:
-		
-	BoxLayout:
-		Months:
-		BoxLayout:
-			orientation: 'vertical'
-			Days:
-			Dates:
-	BoxLayout:
-		size_hint:1,.1
-		Status:
+	
